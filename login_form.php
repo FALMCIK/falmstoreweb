@@ -10,9 +10,9 @@ if(isset($_POST['submit'])){
    $email = mysqli_real_escape_string($conn, $_POST['email']);
    $pass = md5($_POST['password']);
    $cpass = md5($_POST['cpassword']);
-   $user_type = $_POST['user_type'];
+   
 
-   $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
+   $select = " SELECT * FROM users WHERE email = '$email' && password = '$pass' ";
 
    $result = mysqli_query($conn, $select);
 
@@ -20,12 +20,7 @@ if(isset($_POST['submit'])){
 
       $row = mysqli_fetch_array($result);
 
-      if($row['user_type'] == 'admin'){
-
-         $_SESSION['admin_name'] = $row['name'];
-         header('location:admin_page.php');
-
-      }elseif($row['user_type'] == 'user'){
+      ($row['user_type'] == 'user'){
 
          $_SESSION['user_name'] = $row['name'];
          header('location:user_page.php');
