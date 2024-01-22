@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('157.230.110.140', 'root', 'F@lm3939', 'falmstore');
+$conn = mysqli_connect('localhost', 'root', 'F@lm3939', 'user_db');
 
 // Bağlantı kontrolü
 if (!$conn) {
