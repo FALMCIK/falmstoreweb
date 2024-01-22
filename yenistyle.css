@@ -304,6 +304,12 @@ footer {
    font-size: 20px;
    padding:10px;
 }
+.updates {
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 1px;
+}
 footer {
     margin-top: 20px;
     padding: 0px;
