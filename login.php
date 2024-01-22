@@ -16,20 +16,20 @@ if(isset($_POST['submit'])){
 
    $result = mysqli_query($conn, $select);
 
-   if(mysqli_num_rows($result) > 0){
+   f ($result && mysqli_num_rows($result) > 0) {
 
       $row = mysqli_fetch_array($result);
 
-      ($row['user_type'] == 'user'){
+      // Kullanıcı bulundu, oturum başlat ve yönlendirme yap
+      $_SESSION['user_name'] = $row['name'];
+      header('location:user_page.php');
 
-         $_SESSION['user_name'] = $row['name'];
-         header('location:user_page.php');
-
-      }
-     
-   }else{
-      $error[] = 'incorrect email or password!';
+   } else {
+      // Kullanıcı bulunamadı, hata mesajını ayarla
+      $error[] = 'Incorrect email or password!';
    }
+
+      
 
 };
 ?>
