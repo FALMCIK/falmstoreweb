@@ -10,11 +10,24 @@
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="yenistyle.css">
 
 </head>
 <body>
    <?php include "login.php";?>
-
+   <header>
+      <h1>FALMSTORE</h1>
+      <nav>
+          <ul id="menu">
+              <li><a href="index.html">Ana Sayfa</a></li>
+              <li><a href="products.html">Ürünler</a></li>
+              <li id="registerTab"><a href="register.html">Kayıt Ol</a></li>
+              <li id="loginLink"><a href="login.html">Giriş Yap</a></li>
+              
+              
+          </ul>
+      </nav>
+  </header>
 <div class="form-container">
 
    <form action="" method="post">
@@ -23,10 +36,12 @@
       <input type="email" name="email" required placeholder="enter your email">
       <input type="password" name="password" required placeholder="enter your password">
       <input type="submit" name="submit" value="login now" class="form-btn">
-      <p>don't have an account? <a href="register_form.php">register now</a></p>
+      <p>don't have an account? <a href="register.html">register now</a></p>
    </form>
 
 </div>
-
+<footer>
+   <p>&copy; 2024 <span class="thin">FALMSTORE</span></p>
+</footer>
 </body>
 </html>
