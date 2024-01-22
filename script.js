@@ -28,62 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
     updateMenu();
 });
 
-function updateMenu() {
-    const isLoggedIn = checkLoggedIn(); // Kullanıcının giriş yapıp yapmadığını kontrol etmek için bir fonksiyon
 
-    const registerLink = document.querySelector('nav ul li a[href="register.html"]');
-    const loginLink = document.querySelector('nav ul li a[href="login.html"]');
 
-    if (isLoggedIn) {
-        // Kullanıcı giriş yapmışsa kayıt ol ve giriş yap linklerini gizle
-        registerLink.style.display = 'none';
-        loginLink.style.display = 'none';
-    } else {
-        // Kullanıcı giriş yapmamışsa kayıt ol ve giriş yap linklerini göster
-        registerLink.style.display = 'inline';
-        loginLink.style.display = 'inline';
-    }
-}
-
-function checkLoggedIn() {
-    // Bu fonksiyon kullanıcının giriş yapmış olup olmadığını kontrol etmeli
-    // Kullanıcı giriş yapmışsa true, yapmamışsa false dönmelidir.
-    // Bu kontrolü sunucu tarafında yapmak daha güvenlidir.
-    // Şu anki örnek sadece demo amaçlıdır.
-    return false; // Bu durumu sunucu tarafında kontrol etmelisiniz.
-}
-
-function getRandomProducts(allProducts, count) {
-    const shuffledProducts = allProducts.sort(() => 0.5 - Math.random());
-    return shuffledProducts.slice(0, count);
-}
-
-function displayProducts(products) {
-    const productListElement = document.getElementById('productList');
-
-    if (productListElement) {
-        products.forEach(product => {
-            const productElement = document.createElement('div');
-            productElement.classList.add('product');
-
-            const productImage = document.createElement('img');
-            productImage.src = product.image;
-            productImage.alt = product.name;
-
-            const productName = document.createElement('h3');
-            productName.textContent = product.name;
-
-            const productPrice = document.createElement('p');
-            productPrice.textContent = `Fiyat: $${product.price}`;
-
-            productElement.appendChild(productImage);
-            productElement.appendChild(productName);
-            productElement.appendChild(productPrice);
-
-            productListElement.appendChild(productElement);
-        });
-    }
-}
 
 // script.js
 
