@@ -6,17 +6,14 @@ session_start();
 
 if(isset($_POST['submit'])){
 
-   $name = mysqli_real_escape_string($conn, $_POST['name']);
    $email = mysqli_real_escape_string($conn, $_POST['email']);
    $pass = md5($_POST['password']);
-   $cpass = md5($_POST['cpassword']);
-   
 
-   $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
+   $select = "SELECT * FROM user_form WHERE email = '$email' AND password = '$pass' LIMIT 1";
 
    $result = mysqli_query($conn, $select);
 
-   f ($result && mysqli_num_rows($result) > 0) {
+   if ($result && mysqli_num_rows($result) > 0) {
 
       $row = mysqli_fetch_array($result);
 
@@ -29,7 +26,6 @@ if(isset($_POST['submit'])){
       $error[] = 'Incorrect email or password!';
    }
 
-      
+}
 
-};
 ?>
