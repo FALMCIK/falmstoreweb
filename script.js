@@ -21,11 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Diğer ürünler...
     ];
 
-    const selectedProducts = getRandomProducts(products, 6);
-    displayProducts(selectedProducts);
-
-    // Kullanıcı giriş durumuna göre menüyü güncelle
-    updateMenu();
+    
 });
 
 
