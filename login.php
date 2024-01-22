@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
 
          // Kullanıcı bulundu, oturum başlat ve yönlendirme yap
          $_SESSION['user_name'] = $row['name'];
-         header('location:user_page.php');
+         header('location:user_page.html');
 
       } else {
          // Şifre yanlış, hata mesajını ayarla
