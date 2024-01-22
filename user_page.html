@@ -8,7 +8,7 @@
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="yenistyle.css">
-   <link rel="stylesheet" href="css/style.css">
+   
    <?php include "user_page.php";?>
 </head>
 <header>
@@ -30,11 +30,10 @@
 <div class="container">
 
    <div class="content">
-      <h3>hi, <span>user</span></h3>
-      <h1>welcome <span><?php echo $_SESSION['user_name'] ?></span></h1>
-      <p>this is an user page</p>
-      <a href="login_form.php" class="btn">login</a>
-      <a href="register_form.php" class="btn">register</a>
+      <h3>Merhaba, <span>user</span></h3>
+      <h1>Hoşgeldin <span><?php echo $_SESSION['user_name'] ?></span></h1>
+      <p>Burası Senin Profilin</p>
+      
       <a href="logout.php" class="btn">logout</a>
    </div>
 
