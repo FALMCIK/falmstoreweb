@@ -5,7 +5,7 @@
 session_start();
 
 if(!isset($_SESSION['user_name'])){
-   header('location:login_form.php');
+   header('location:login.html');
 }
 
 ?>
@@ -22,6 +22,20 @@ if(!isset($_SESSION['user_name'])){
    <link rel="stylesheet" href="css/style.css">
 
 </head>
+<header>
+        <h1>FALMSTORE</h1>
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="products.html">Ürünler</a></li>
+                <li id="registerTab"><a href="register.html">Kayıt Ol</a></li>
+                <li id="loginLink"><a href="login.html">Giriş Yap</a></li>
+                
+                
+            </ul>
+        </nav>
+        
+    </header>
 <body>
    
 <div class="container">

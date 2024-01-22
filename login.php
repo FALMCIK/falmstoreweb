@@ -17,14 +17,23 @@ if(isset($_POST['submit'])){
 
       $row = mysqli_fetch_array($result);
 
-      // Kullanıcı bulundu, oturum başlat ve yönlendirme yap
-      $_SESSION['user_name'] = $row['name'];
-      header('location:user_page.php');
+      // Girilen şifre ile veritabanındaki şifreyi karşılaştır
+      if (md5($_POST['password']) == $row['password']) {
+
+         // Kullanıcı bulundu, oturum başlat ve yönlendirme yap
+         $_SESSION['user_name'] = $row['name'];
+         header('location:user_page.php');
+
+      } else {
+         // Şifre yanlış, hata mesajını ayarla
+         $error[] = 'Incorrect password!';
+      }
 
    } else {
       // Kullanıcı bulunamadı, hata mesajını ayarla
-      $error[] = 'Incorrect email or password!';
+      $error[] = 'Incorrect email!';
    }
+
 
 }
 
