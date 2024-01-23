@@ -164,54 +164,56 @@ h4 {
    background-color: var(--orange);
 }
 
-.form-container{
+.form-container {
    min-height: 100vh;
    display: flex;
    align-items: center;
    justify-content: center;
-   padding:20px;
-   padding-bottom: 70px;
 }
 
-.form-container form{
-   width: 500px;
-   border-radius: 5px;
-   border:var(--border);
-   padding:20px;
-   text-align: center;
-   background-color: var(--white);
+form {
+   width: 300px;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.form-container form h3{
-   font-size: 30px;
-   margin-bottom: 10px;
-   text-transform: uppercase;
-   color:var(--black);
-}
-
-.form-container form .box{
+input {
    width: 100%;
+   padding: 10px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
    border-radius: 5px;
-   border:var(--border);
-   padding:12px 14px;
-   font-size: 18px;
-   margin:10px 0;
 }
 
-.form-container form p{
-   margin-top: 20px;
-   font-size: 20px;
-   color:var(--black);
+.form-btn {
+   background-color: #3498db;
+   color: #fff;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   width: 100%;
 }
 
-.form-container form p a{
-   color:var(--red);
+.form-btn:hover {
+   background-color: #007bb5;
 }
 
-.form-container form p a:hover{
+p {
+   text-align: center;
+   margin-top: 15px;
+   color: #333;
+}
+
+a {
+   color: #3498db;
+   text-decoration: none;
+}
+
+a:hover {
    text-decoration: underline;
 }
-
 .container{
    padding:0 20px;
    margin:0 auto;
