@@ -5,13 +5,13 @@ session_start();
 $user_id = $_SESSION['user_id'];
 
 if(!isset($user_id)){
-   header('location:login.php');
+   header('location:login.html');
 };
 
 if(isset($_GET['logout'])){
    unset($user_id);
    session_destroy();
-   header('location:login.php');
+   header('location:login.html');
 };
 
 if(isset($_POST['add_to_cart'])){
@@ -24,10 +24,10 @@ if(isset($_POST['add_to_cart'])){
    $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
 
    if(mysqli_num_rows($select_cart) > 0){
-      $message[] = 'product already added to cart!';
+      $message[] = 'Bu ürün çoktan sepete eklendi!';
    }else{
       mysqli_query($conn, "INSERT INTO `cart`(user_id, name, price, image, quantity) VALUES('$user_id', '$product_name', '$product_price', '$product_image', '$product_quantity')") or die('query failed');
-      $message[] = 'product added to cart!';
+      $message[] = 'Ürün sepete eklendi!';
    }
 
 };
@@ -36,7 +36,7 @@ if(isset($_POST['update_cart'])){
    $update_quantity = $_POST['cart_quantity'];
    $update_id = $_POST['cart_id'];
    mysqli_query($conn, "UPDATE `cart` SET quantity = '$update_quantity' WHERE id = '$update_id'") or die('query failed');
-   $message[] = 'cart quantity updated successfully!';
+   $message[] = 'Sepet başarıyla güncellendi!';
 }
 
 if(isset($_GET['remove'])){
@@ -157,7 +157,7 @@ if(isset($message)){
    </table>
 
    <div class="cart-btn">  
-      <a href="#" class="btn <?php echo ($grand_total > 1)?'':'disabled'; ?>">proceed to checkout</a>
+      <a href="#" class="btn <?php echo ($grand_total > 1)?'':'disabled'; ?>">Ödeme İşlemine Geç</a>
    </div>
 
 </div>
