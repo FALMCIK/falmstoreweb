@@ -2,7 +2,7 @@
 
 body {
    margin: 0;
-   overflow: hidden; /* Sayfa kenarlarındaki boşlukları gizle */
+   overflow: visible; /* Sayfa kenarlarındaki boşlukları gizle */
    background: url('https://i.imgur.com/uGeKIVW.gif') center/cover no-repeat fixed; /* Gif linkini ekleyin */
    animation: fadeIn 2s ease-in-out; /* fadeIn animasyonunu 2 saniyede bir oynat, ease-in-out geçiş türü kullan */
  }
@@ -224,7 +224,7 @@ h4 {
    margin-bottom: 20px;
    font-size: 40px;
    text-transform: uppercase;
-   color:var(--black);
+   color:#007bff;
 }
 
 .container .user-profile{
