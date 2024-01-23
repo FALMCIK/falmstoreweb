@@ -170,46 +170,71 @@ h4 {
    align-items: center;
    justify-content: center;
    padding:20px;
-   padding-bottom: 70px;
+   padding-bottom: 60px;
+   
 }
 
 .form-container form{
-   width: 500px;
-   border-radius: 5px;
-   border:var(--border);
    padding:20px;
+   border-radius: 5px;
+   box-shadow: 0 5px 10px rgba(0,0,0,.1);
+   background: #fff;
    text-align: center;
-   background-color: var(--white);
+   width: 500px;
 }
 
 .form-container form h3{
    font-size: 30px;
-   margin-bottom: 10px;
    text-transform: uppercase;
-   color:var(--black);
+   margin-bottom: 10px;
+   color:#333;
 }
 
-.form-container form .box{
+.form-container form input,
+.form-container form select{
    width: 100%;
+   padding:10px 15px;
+   font-size: 17px;
+   margin:8px 0;
+   background: #eee;
    border-radius: 5px;
-   border:var(--border);
-   padding:12px 14px;
-   font-size: 18px;
-   margin:10px 0;
+}
+
+.form-container form select option{
+   background: #fff;
+}
+
+.form-container form .form-btn{
+   background: #fbd0d9;
+   color:crimson;
+   text-transform: capitalize;
+   font-size: 20px;
+   cursor: pointer;
+}
+
+.form-container form .form-btn:hover{
+   background: crimson;
+   color:#fff;
 }
 
 .form-container form p{
-   margin-top: 20px;
+   margin-top: 10px;
    font-size: 20px;
-   color:var(--black);
+   color:#333;
 }
 
 .form-container form p a{
-   color:var(--red);
+   color:crimson;
 }
 
-.form-container form p a:hover{
-   text-decoration: underline;
+.form-container form .error-msg{
+   margin:10px 0;
+   display: block;
+   background: crimson;
+   color:#fff;
+   border-radius: 5px;
+   font-size: 20px;
+   padding:10px;
 }
 
 .container{
