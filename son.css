@@ -79,6 +79,12 @@ h3 {
     margin-top: 20px;
 
 }
+h4 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 10px;
+
+}
 
 .product {
     display: inline-block; /* Ürünleri yatayda sırala */
@@ -164,7 +170,7 @@ h3 {
 
 .container .content h3{
    font-size: 30px;
-   color:#333;
+   color:#ffffff;
 }
 
 .container .content h3 span{
@@ -176,11 +182,11 @@ h3 {
 
 .container .content h1{
    font-size: 50px;
-   color:#333;
+   color:#ffffff;
 }
 
 .container .content h1 span{
-   color:crimson;
+   color:rgb(42, 230, 73);
 }
 
 .container .content p{
