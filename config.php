@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost', 'root', 'F@lm3939', 'user_db');
+$conn = mysqli_connect('localhost', 'root', 'F@lm3939', 'shop_db') or die('connection failed');
 
 // Bağlantı kontrolü
 if (!$conn) {

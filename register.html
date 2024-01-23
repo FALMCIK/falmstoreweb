@@ -13,6 +13,13 @@
 </head>
 <body>
    <?php include "register.php";?>
+   <?php
+if(isset($message)){
+   foreach($message as $message){
+      echo '<div class="message" onclick="this.remove();">'.$message.'</div>';
+   }
+}
+?>
    <header>
       
       <nav>

@@ -41,7 +41,13 @@
       <input type="submit" name="submit" value="Giriş yapın" class="form-btn">
       <p>Hesabınız yok mu ? <a href="register.html"> Kayıt olun</a></p>
    </form>
-
+   <?php
+if(isset($message)){
+   foreach($message as $message){
+      echo '<div class="message" onclick="this.remove();">'.$message.'</div>';
+   }
+}
+?>
 </div>
 <footer>
    <p>&copy; 2024 <span class="thin">FALMSTORE</span></p>
