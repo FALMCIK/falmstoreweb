@@ -65,6 +65,22 @@ if(isset($_GET['delete_all'])){
 
 </head>
 <body>
+<header> 
+        <nav>
+            <ul id="menu">
+                <h1>FALMSTORE</h1>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                
+                
+                <li><a href="cart.php">Sepet</a></li>
+                <li><a href="updates.html">Güncellemeler</a></li>
+                
+                
+                
+            </ul>
+        </nav>
+        
+    </header>  
    
 <?php
 if(isset($message)){

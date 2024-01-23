@@ -19,12 +19,20 @@
 ?>
     <header> 
         <nav>
+            <?php
+              $select_user = mysqli_query($conn, "SELECT * FROM `user_form` WHERE id = '$user_id'") or die('query failed');
+              if(mysqli_num_rows($select_user) > 0){
+                 $fetch_user = mysqli_fetch_assoc($select_user);
+              };
+           ?>
             <ul id="menu">
                 <h1>FALMSTORE</h1>
                 <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="products.html">Ürünler</a></li>
+                
                 
                 <li><a href="cart.php">Sepet</a></li>
+                <<p> username : <span><?php echo $fetch_user['name']; ?></span> </p>
+                <p> email : <span><?php echo $fetch_user['email']; ?></span> </p>
                 <li><a href="updates.html">Güncellemeler</a></li>
                 
                 
@@ -37,12 +45,7 @@
 
         <div class="user-profile">
         
-           <?php
-              $select_user = mysqli_query($conn, "SELECT * FROM `user_form` WHERE id = '$user_id'") or die('query failed');
-              if(mysqli_num_rows($select_user) > 0){
-                 $fetch_user = mysqli_fetch_assoc($select_user);
-              };
-           ?>
+           
         
            <p> username : <span><?php echo $fetch_user['name']; ?></span> </p>
            <p> email : <span><?php echo $fetch_user['email']; ?></span> </p>
