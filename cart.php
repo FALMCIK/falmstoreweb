@@ -58,7 +58,7 @@ if(isset($_GET['delete_all'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>shopping cart</title>
+   <title>Sepetim</title>
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="style.css">
@@ -139,7 +139,7 @@ if(isset($message)){
                </form>
             </td>
             <td>$<?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</td>
-            <td><a href="index.php?remove=<?php echo $fetch_cart['id']; ?>" class="delete-btn" onclick="return confirm('remove item from cart?');">remove</a></td>
+            <td><a href="index.php?remove=<?php echo $fetch_cart['id']; ?>" class="delete-btn" onclick="return confirm('Ürünü sepetten silmek istediğine emin misin?');">Sil</a></td>
          </tr>
       <?php
          $grand_total += $sub_total;
@@ -149,9 +149,9 @@ if(isset($message)){
          }
       ?>
       <tr class="table-bottom">
-         <td colspan="4">grand total :</td>
+         <td colspan="4">Genel Toplam :</td>
          <td>$<?php echo $grand_total; ?>/-</td>
-         <td><a href="index.php?delete_all" onclick="return confirm('delete all from cart?');" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled'; ?>">delete all</a></td>
+         <td><a href="index.php?delete_all" onclick="return confirm('delete all from cart?');" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled'; ?>">Hepsini Sil</a></td>
       </tr>
    </tbody>
    </table>
