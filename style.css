@@ -31,10 +31,92 @@
 *::-webkit-scrollbar-thumb{
    background-color: var(--blue);
 }
-
-body{
-   background-color: var(--light-bg);
+body {
+   margin: 0;
+   overflow: hidden; /* Sayfa kenarlarındaki boşlukları gizle */
+   background: url('https://i.imgur.com/uGeKIVW.gif') center/cover no-repeat fixed; /* Gif linkini ekleyin */
+   animation: fadeIn 2s ease-in-out; /* fadeIn animasyonunu 2 saniyede bir oynat, ease-in-out geçiş türü kullan */
+ }
+ 
+ @keyframes fadeIn {
+   from {
+     opacity: 0;
+   }
+   to {
+     opacity: 1;
+   }
+ }
+ 
+ header {
+   z-index: 1; /* Header'ın gif üzerinde olmasını sağla */
+   /* Diğer header stil özellikleri */
+ }
+ header {
+   background-color: #f0f0f0; /* Header arkaplan rengi */
+   padding: 10px; /* Header içerisindeki içeriğin etrafındaki iç dolgu */
 }
+
+#menu {
+   list-style-type: none; /* Liste stilini kaldır */
+   margin: 0; /* Liste içerisindeki boşlukları sıfırla */
+   padding: 0; /* Liste içerisindeki iç dolguları sıfırla */
+   display: flex; /* Flexbox kullanarak öğeleri yan yana hizala */
+   justify-content: space-between; /* Öğeler arasında eşit mesafe bırak */
+   align-items: center; /* Öğeleri dikey olarak ortala */
+}
+
+#menu h1 {
+   margin: 0; /* H1 içerisindeki boşlukları sıfırla */
+   font-family: 'Arial', sans-serif; /* Yazı tipi değiştir */
+   font-size: 24px; /* Yazı boyutunu ayarla */
+}
+
+#menu li {
+   margin: 0 10px; /* Liste öğeleri arasında yatay boşluk bırak */
+}
+
+#menu a {
+   text-decoration: none; /* Link altı çizgilerini kaldır */
+   color: #555; /* Link rengi */
+   font-weight: bold; /* Kalın font ağırlığı */
+   border-radius: 15px; /* Oval kutucuk kenar yarıçapı */
+   padding: 8px 15px; /* Link içindeki iç dolgu */
+   transition: background-color 0.3s, color 0.3s; /* Arka plan ve yazı rengi değişimini 0.3 saniyede gerçekleştir */
+   background-color: #f0f0f0; /* Varsayılan arka plan rengi */
+}
+
+#menu a:hover {
+   background-color: #007bff; /* Linkin üzerine gelindiğinde arka plan rengini değiştir */
+   color: #fff; /* Linkin üzerine gelindiğinde yazı rengini değiştir */
+}
+#content {
+   
+   
+   flex-direction: column; /* İçerikleri dikeyde sırala */
+   align-items: center; 
+   justify-content: space-between;
+   color: #fffcfc;
+}
+
+h2 {
+   color: #ffffff;
+   text-align: center;
+   margin-top: 30px;
+
+}
+h3 {
+   color: #ffffff;
+   text-align: center;
+   margin-top: 20px;
+
+}
+h4 {
+   color: #ffffff;
+   text-align: center;
+   margin-top: 10px;
+
+}
+
 
 .message{
    position: sticky;

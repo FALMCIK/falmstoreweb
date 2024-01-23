@@ -96,35 +96,7 @@ h4 {
 
 }
 
-.product {
-    display: inline-block; /* Ürünleri yatayda sırala */
-    width: calc(33.33% - 30px); /* Ürünler arasında boşluk bırakarak eşit genişlik ayarla */
-    box-sizing: border-box;
-    margin: 10px;
-}
 
-.product img {
-    width: 100%; /* Resimlerin genişliğini 100% olarak ayarla */
-    height: auto; /* Otomatik yükseklik ayarı, orantıları koruyarak ölçeklenmesini sağla */
-}
-
-.product img {
-    width: 100%; /* Resimlerin genişliğini 100% olarak ayarlar */
-    height: auto; /* Otomatik yükseklik ayarı, orantıları koruyarak ölçeklenmesini sağlar */
-}
-
-/* Ürün başlık ve fiyat */
-.product h3,
-.product p {
-    margin-top: 10px;
-    text-align: center;
-}
-
-
-
-.thin {
-    font-weight: normal;
-}
 /* Yeni CSS Kodu */
 
 #category {
