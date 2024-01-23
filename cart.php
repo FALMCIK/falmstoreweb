@@ -42,12 +42,12 @@ if(isset($_POST['update_cart'])){
 if(isset($_GET['remove'])){
    $remove_id = $_GET['remove'];
    mysqli_query($conn, "DELETE FROM `cart` WHERE id = '$remove_id'") or die('query failed');
-   header('location:index.php');
+   header('location:cart.php');
 }
   
 if(isset($_GET['delete_all'])){
    mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
-   header('location:index.php');
+   header('location:cart.php');
 }
 
 ?>
@@ -109,15 +109,15 @@ if(isset($message)){
 
 <div class="shopping-cart">
 
-   <h1 class="heading">shopping cart</h1>
+   <h1 class="heading">Sepetim</h1>
 
    <table>
       <thead>
-         <th>image</th>
-         <th>name</th>
-         <th>price</th>
-         <th>quantity</th>
-         <th>total price</th>
+         <th>Resim</th>
+         <th>İsim</th>
+         <th>Fiyat</th>
+         <th>Adet</th>
+         <th>Toplam Fiyat</th>
          <th>action</th>
       </thead>
       <tbody>
