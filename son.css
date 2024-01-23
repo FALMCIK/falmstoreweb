@@ -1,65 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #4cfd16, #000000); /* Kırmızı-beyaz gradyan arka plan */
-}
-
-header {
-    background: linear-gradient(to top, #4cfd16, #000000);
-    color: #000000;
-    text-align: center;
-    padding: 20px 0;
-    border-radius: 1px;
-}
-
-header h1 {
-    font-family: 'Arial Black', sans-serif; /* Farklı yazı tipi */
-    font-weight: bold; /* Kalın */
-    font-size: 40px;
-}
-
-h1#title {
-    margin: 0;
-    font-family: 'Arial Black', sans-serif;
-    font-weight: bold;
-    font-size: 36px;
-}
-
-
-nav {
-    margin-top: 20px;
+    overflow: hidden; /* Sayfa kenarlarındaki boşlukları gizle */
+    background: url('https://i.imgur.com/uGeKIVW.gif') center/cover no-repeat fixed; /* Gif linkini ekleyin */
+    animation: fadeIn 2s ease-in-out; /* fadeIn animasyonunu 2 saniyede bir oynat, ease-in-out geçiş türü kullan */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  header {
+    z-index: 1; /* Header'ın gif üzerinde olmasını sağla */
+    /* Diğer header stil özellikleri */
+  }
+  header {
+    background-color: #f0f0f0; /* Header arkaplan rengi */
+    padding: 10px; /* Header içerisindeki içeriğin etrafındaki iç dolgu */
 }
 
 #menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+    list-style-type: none; /* Liste stilini kaldır */
+    margin: 0; /* Liste içerisindeki boşlukları sıfırla */
+    padding: 0; /* Liste içerisindeki iç dolguları sıfırla */
+    display: flex; /* Flexbox kullanarak öğeleri yan yana hizala */
+    justify-content: space-between; /* Öğeler arasında eşit mesafe bırak */
+    align-items: center; /* Öğeleri dikey olarak ortala */
+}
+
+#menu h1 {
+    margin: 0; /* H1 içerisindeki boşlukları sıfırla */
+    font-family: 'Arial', sans-serif; /* Yazı tipi değiştir */
+    font-size: 24px; /* Yazı boyutunu ayarla */
 }
 
 #menu li {
-    margin-right: 15px;
+    margin: 0 10px; /* Liste öğeleri arasında yatay boşluk bırak */
 }
 
-#menu li a {
-    text-decoration: none;
-    color: #070707;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 10px 20px; /* Buton benzeri iç içe geçmiş alan */
-    border: 2px solid #000000; /* Beyaz kenarlık */
-    border-radius: 8px; /* Yumuşak köşeler */
-    transition: background-color 0.3s, color 0.3s; /* Geçiş efektleri */
+#menu a {
+    text-decoration: none; /* Link altı çizgilerini kaldır */
+    color: #555; /* Link rengi */
+    font-weight: bold; /* Kalın font ağırlığı */
+    border-radius: 15px; /* Oval kutucuk kenar yarıçapı */
+    padding: 8px 15px; /* Link içindeki iç dolgu */
+    transition: background-color 0.3s, color 0.3s; /* Arka plan ve yazı rengi değişimini 0.3 saniyede gerçekleştir */
+    background-color: #f0f0f0; /* Varsayılan arka plan rengi */
 }
 
-#menu li a:hover {
-    background-color: #000000; /* Hover durumunda arkaplan rengi */
-    color: #4cfd16; /* Hover durumunda metin rengi */
+#menu a:hover {
+    background-color: #007bff; /* Linkin üzerine gelindiğinde arka plan rengini değiştir */
+    color: #fff; /* Linkin üzerine gelindiğinde yazı rengini değiştir */
 }
-
 #content {
     
     
@@ -70,9 +68,15 @@ nav {
 }
 
 h2 {
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     margin-top: 30px;
+
+}
+h3 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
 
 }
 
@@ -100,15 +104,7 @@ h2 {
     text-align: center;
 }
 
-footer {
-    background-color: rgba(105, 235, 53, 0.7); /* RGB renk değerleri ve 0.7 opaklık */
-    color: #000000;
-    text-align: center;
-    padding: 0px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+
 
 .thin {
     font-weight: normal;
@@ -144,7 +140,6 @@ footer {
     margin-bottom: 20px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 *{
    font-family: 'Poppins', sans-serif;
@@ -214,7 +209,7 @@ footer {
    justify-content: center;
    padding:20px;
    padding-bottom: 60px;
-   background: #eee;
+   
 }
 
 .form-container form{
@@ -286,9 +281,11 @@ footer {
     border-radius: 1px;
 }
 footer {
-    margin-top: 20px;
-    padding: 0px;
-    background-color: rgba(105, 235, 53, 0.7);
+    background-color: rgba(235, 53, 220, 0.7); /* RGB renk değerleri ve 0.7 opaklık */
     color: #000000;
     text-align: center;
+    padding: 0px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

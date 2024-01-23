@@ -30,3 +30,4 @@ function displayProducts(products) {
         productListElement.appendChild(productElement);
     });
 }
+
