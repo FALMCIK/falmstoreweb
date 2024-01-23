@@ -65,14 +65,29 @@ if(isset($_GET['delete_all'])){
 
 </head>
 <body>
+<?php include "index.php";?>
+    <?php
+        if(isset($message)){
+        foreach($message as $message){
+        echo '<div class="message" onclick="this.remove();">'.$message.'</div>';
+   }
+}
+?>
 <header> 
         <nav>
+        <?php
+              $select_user = mysqli_query($conn, "SELECT * FROM `user_form` WHERE id = '$user_id'") or die('query failed');
+              if(mysqli_num_rows($select_user) > 0){
+                 $fetch_user = mysqli_fetch_assoc($select_user);
+              };
+           ?>
             <ul id="menu">
                 <h1>FALMSTORE</h1>
                 <li><a href="index.html">Ana Sayfa</a></li>
-                
-                
                 <li><a href="cart.php">Sepet</a></li>
+                <p> Kullanıcı adı : <span><?php echo $fetch_user['name']; ?></span> </p>
+                <p> Mail : <span><?php echo $fetch_user['email']; ?></span> </p>
+                <a href="index.php?logout=<?php echo $user_id; ?>" onclick="return confirm('Çıkış yapmak istediğinize emin misiniz?');" class="delete-btn">Çıkış Yap</a>
                 <li><a href="updates.html">Güncellemeler</a></li>
                 
                 
