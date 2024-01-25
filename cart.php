@@ -151,7 +151,7 @@ if(isset($message)){
       <tr class="table-bottom">
          <td colspan="4">Genel Toplam :</td>
          <td>$<?php echo $grand_total; ?>/-</td>
-         <td><a href="index.htnl?delete_all" onclick="return confirm('delete all from cart?');" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled'; ?>">Hepsini Sil</a></td>
+         <td><a href="index.html?delete_all" onclick="return confirm('delete all from cart?');" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled'; ?>">Hepsini Sil</a></td>
       </tr>
    </tbody>
    </table>
