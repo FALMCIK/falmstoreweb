@@ -28,7 +28,7 @@ if(isset($_POST['add_to_cart'])){
       mysqli_query($conn, "INSERT INTO `cart`(user_id, name, price, image, quantity) VALUES('$user_id', '$product_name', '$product_price', '$product_image', '$product_quantity')") or die('query failed');
       $message[] = 'Ürün sepete eklendi!';
    }
-
+ 
 };
 
 
