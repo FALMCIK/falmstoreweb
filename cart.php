@@ -15,7 +15,7 @@ if(isset($_GET['logout'])){
 };
 
 if(isset($_POST['add_to_cart'])){
-
+ 
    $product_name = $_POST['product_name'];
    $product_price = $_POST['product_price'];
    $product_image = $_POST['product_image'];
